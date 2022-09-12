@@ -1,402 +1,295 @@
-
-*{
-	padding: 0;
-	margin: 0;
-	font-family: 'Josefin Sans', sans-serif;
-	box-sizing: border-box;
-}
-.hero{
-	height: 100vh;
-	width: 100%;
-	background-image: url("./images/image.png");
-	background-size: cover;
-	background-position: center;
-}
-nav{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 45px;
-	padding-left: 8%;
-	padding-right: 8%;
-}
-.logo{
-	color: white;
-	font-size: 35px;
-	letter-spacing: 1px;
-	cursor: pointer;
-}
-span{
-	color: #f9004d;
-}
-nav ul li{
-	list-style-type: none;
-	display: inline-block;
-	padding: 10px  25px;
-}
-nav ul li a{
-	color: #f9004d;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: capitalize;
-}
-nav ul li a:hover{
-	color: white;
-	transition: .4s;
-
-}
-.btn{
-	background-color:white;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 10px 25px;
-	border-radius: 30px;
-	transition: transform .4s; 
-}
-.btn:hover{
-	transform: scale(1.2);
-}
-.content{
-	position: absolute;
-	top: 80%;
-	left:3%;
-	transform: translateY(-50%);
-}
-h1{
-	padding: 45;
-	margin: 20px 0px 20px;
-	color:white;
-    font-size: 50px;
+/* Main colors, formatting and styling repeated throughtout website */
+:root {
+    --dark-colour: #001F02;
+    --green: #52A36D;
+    --light-colour: #FFFFFC;
+    --yellow: #DC9118;
+    --link-colour: #69db61;
+    --contrast-colour: #ff5cb0;
+    --heading-font-family: 'Josefin Sans', sans-serif;
+    --body-font-family: 'Quicksand', sans-serif;
 }
 
-h3{
-	color: white;
-	font-size: 25px;
-	margin-bottom: 50px;
-}
-h4{
-	color: white;
-	letter-spacing: 2px;
-	font-size: 25px;
-}
-.newslatter form{
-	width: 380px;
-	max-width: 100%;
-	position: relative;
-}
-.newslatter form input:first-child{
-	display: inline-block;
-	width: 100%;
-	padding: 14px 130px 14px 15px;
-	border: 2px solid #f9004d;
-	outline: none;
-	border-radius: 30px;
-}
-.newslatter form input:last-child{
-	position: absolute;
-	display: inline-block;
-	outline: none;
-	border: none;
-	padding: 10px 30px;
-	border-radius: 30px;
-	background-color:#f9004d;
-	color: white;
-	box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
-	top: 6px;
-	right: 6px; 
+/* Highlight color and background */
+::selection {
+    background-color: var(--contrast-colour);
+    color: var(--dark-colour);
 }
 
-.about{
-	width: 100%;
-	padding: 100px 0px;
-	background-color: #191919;
-}
-.about img{
-	height: auto;
-	width: 430px;
-}
-.about-text{
-	width: 550px;
-}
-.main{
-	width: 1130px;
-	max-width: 95%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-.about-text h2{
-	color: white;
-	font-size: 75px;
-	text-transform: capitalize;
-	margin-bottom: 20px;
-}
-.about-text h5{
-	color: white;
-	letter-spacing: 2px;
-	font-size: 22px;
-	margin-bottom: 25px;
-	text-transform: capitalize;
-}
-.about-text p{
-	color: white;
-	letter-spacing: 1px;
-	line-height: 28px;
-	font-size: 18px;
-	margin-bottom: 45px;
-}
-button{
-	background-color:#f9004d;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s; 
-}
-button:hover{
-	background-color: transparent;
-	border: 2px solid #f9004d;
-	cursor: pointer;
+/* Body element selector */
+body {
+    background-color: var(--light-colour);
 }
 
-.service{
-	background: black;
-	width: 100%;
-	padding: 100px 0px;
-}
-.title h2{
-	color: white;
-	font-size: 75px;
-	width: 1130px;
-	margin: 30px auto;
-	text-align: center;
-}
-.box{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 400px;
+/* Header element styling */
+header {
+    font-family: var(--heading-font-family)
 }
 
-.card{
-	height: 365px;
-	width: 335px;
-	padding: 20px 35px;
-	background: #191919;
-	border-radius: 20px;
-	margin: 15px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-}
-.card{
-	height: 365px;
-	width: 335px;
-	padding: 20px 35px;
-	background: #191919;
-	border-radius: 20px;
-	margin: 15px;
-	position: relative;
-	overflow: hidden;
-	text-align: center;
-}	
-.card i{
-	font-size: 50px;
-	display: block;
-	text-align: center;
-	margin: 25px 0px;
-	color: #f9004d;
-
-}
-h5{
-	color: white;
-	font-size: 23px;
-	margin-bottom: 15px;
-}
-.pra p{
-	color: white;
-	font-size: 16px;
-	line-height: 27px;
-	margin-bottom: 25px;
-}
-.card .button{
-	background-color:#f9004d;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 9px 22px;
-	border-radius: 30px;
-	transition: .4s; 
+/* H1 selector and styling */
+h1 {
+    font-size: 45px;
+    margin-bottom: 0;
+    width: 50%;
 }
 
-.card .button:hover{
-	background-color: transparent;
-	border: 2px solid #f9004d;
-	cursor: pointer;
-}
-.contact-me{
-	width: 100%;
-	height: 290px;
-	background: #191919;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-}
-.contact-me p{
-	color: white;
-	font-size: 30px;
-	font-weight: bold;
-	margin-bottom: 25px;
-}
-.contact-me .button-two{
-	background-color:#f9004d;
-	color: white;
-	text-decoration: none;
-	border: 2px solid transparent;
-	font-weight: bold;
-	padding: 13px 30px;
-	border-radius: 30px;
-	transition: .4s; 
+/* Navigation element in header styling */
+.nav-bar-colours {
+    background-color: var(--dark-colour);
+    color: var(--light-colour);
 }
 
-footer{
-	position: relative;
-	width: 100%;
-	height: 400px;
-	background: black;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.nav-link-color {
+    color: var(--light-colour);
 }
-footer p:nth-child(1){
-	font-size: 30px;
-	color: white;
-	margin-bottom: 20px;
-	font-weight: bold;
+
+.nav-link-color:hover {
+    color: var(--link-colour);
 }
-footer p:nth-child(2){
-	color: #ffffff;
-	font-size: 17px;
-	width: 500px;
-	text-align: center;
-	line-height: 26px;
+
+.navbar-separate-styling {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
 }
-.social{
-	display: flex;
+
+.nav-bar-padding {
+    padding: 30px;
 }
-.social a{
-	width: 220px;
-	height: 130px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background:  #f9004d;
-	border-radius: 50%;
-	margin: 80px 30px;
-	color: white;
-	text-decoration: none;
-	font-size: 20px;
+
+button {
+    color: var(--light-colour);
 }
-.social a:hover{
-	transform: scale(1.3);
-	transition: .3s;
+
+button:hover {
+    color: var(--link-colour);
 }
-.end{
-	position: absolute;
-	color:#f9004d;
-	bottom: 35px;
-	font-size: 14px; 
+
+/* Left border styling */
+.left-border {
+    border-left: 5px solid var(--dark-colour);
+    padding-left: 65px;
+}
+
+.top-margin {
+    margin-top: 10px;
+}
+
+/* Figure and hero image element selector and styling */
+figure #hero {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Main content styling */
+main {
+    margin-top: 10px;
+}
+
+p {
+    font-family: var(--body-font-family);
+    color: var(--dark-colour);
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    line-height: 20px;
+}
+
+h2 {
+    color: var(--yellow);
+    font-family: var(--heading-font-family);
+    font-size: 40px;
+    margin-bottom: 1.5rem;
+}
+
+section {
+    margin-top: 20px;
+}
+
+/* Main-box margin */
+.main-box {
+    margin: 10px;
+}
+
+/* Margins around the main box titles */
+.main-box-title {
+    margin-left: 40px;
+}
+
+/* About me styling */
+#about-me-row {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* About me image styling */
+.img-styling {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border: 5px solid var(--dark-colour);
+    margin-bottom: 10px;
+}
+
+/* My work styling */
+#my-work-row-1 {
+    margin: 0;
+}
+
+#my-work-row-2 {
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* Feature work styling */
+.feature-work img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 10px solid var(--dark-colour);
+}
+
+.feature-work .my-work-title {
+    color: var(--light-colour);
+    font-family: var(--heading-font-family);
+    padding: 20px;
+    background-color: var(--dark-colour);
+    font-size: 20px;
+}
+
+.feature-work .my-work-title p {
+    font-size: 16px;
+    color: var(--light-colour);
+    font-family: var(--body-font-family);
+    margin-bottom: 0;
+}
+
+.feature-work .my-work-title a {
+    color: var(--light-colour);
+    text-decoration: underline;
+}
+
+.feature-work .my-work-title a:hover {
+    color: var(--link-colour);
+    text-decoration: none;
+}
+
+/* Other portfolio work styling */
+.my-work-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 10px solid var(--dark-colour);
+}
+
+.portfolio-title {
+    color: var(--light-colour);
+    font-family: var(--heading-font-family);
+    padding: 20px;
+    background-color: var(--dark-colour);
+    font-size: 20px;
+}
+
+.portfolio-title p {
+    font-size: 16px;
+    color: var(--light-colour);
+    font-family: var(--body-font-family);
+    margin-bottom: 0;
+}
+
+.portfolio-title a {
+    color: var(--light-colour);
+    text-decoration: underline;
+}
+
+.portfolio-title a:hover {
+    color: var(--link-colour);
+    text-decoration: none;
+}
+
+/* Contact me section styling */
+#contact-me-row {
+    align-items: center;
+    margin: 0;    
+}
+
+.contact-me-details {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.contact-me-details a {
+    color: var(--dark-colour);
+    font-weight: normal;
+}
+
+.contact-me-details a:hover {
+    text-decoration: none;
+}
+
+.paragraph-box .contact-me-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.paragraph-box .contact-me-details li {
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--dark-colour);
+    line-height: 1.5em;
 }
 
 
-/* Media Queries For Desktop View */
-@media screen and (min-width: 1024px) {
-    .gfg-div {
-      background-color: #63c971;
-      color: #fff;
+/* Footer styling */
+footer p {
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+}
+
+/* Media queries for responsive web application - tablet */
+@media screen and (max-width: 992px) {
+    h1 {
+        width: 60%;
     }
-  }
-   
-  /* For Tablet View */
-  @media screen and (min-device-width: 768px)
-  and (max-device-width: 1024px) {
-    .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: orange;
-      color: black;
+
+    .navbar-separate-styling {
+        position: initial;
+        right: auto;
     }
-  }
-   
-  /* For Mobile Portrait View */
-  @media screen and (max-device-width: 480px)
-  and (orientation: portrait) {
-    .gfg-div {
-      width: 200px;
-      height: 200px;
-      background-color: red;
-      color: #fff;
+
+    .paragraph-box {
+        position: static;
+        margin-left: var(--body-margin);
+        margin-right: 75px;
     }
-  }
-   
-  /* For Mobile Landscape View */
-  @media screen and (max-device-width: 640px)
-  and (orientation: landscape) {
-    .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: cyan;
-      color: black;
+
+    .paragraph-box img {
+        width: 100%;
     }
-  }
-   
-  /* For Mobile Phones Portrait or Landscape View */
-  @media screen and (max-device-width: 640px) {
-    .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: chartreuse;
-      color: black;
+}
+
+/* Media queries for responsive web application for a large smartphones */
+@media screen and (max-width: 768px) {
+    h1 {
+        width: 60%;
     }
-  }
-   
-  /* For iPhone 4 Portrait or Landscape View */
-  @media screen and (min-device-width: 320px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: brown;
-      color: black;
+
+    .img-styling {
+        width: 100%;
     }
-  }
-   
-  /* For iPhone 5 Portrait or Landscape View */
-  @media (device-height: 568px) and (device-width: 320px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: cornflowerblue;
-      color: black;
+
+    .main-box-title {
+        margin-left: auto;
     }
-  }
-   
-  /* For iPhone 6 and 6 plus Portrait or Landscape View */
-  @media (min-device-height: 667px) and (min-device-width: 375px)
-  and (-webkit-min-device-pixel-ratio: 3) {
-    .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: darkgoldenrod;
-      color: black;
+
+    .navbar-separate-styling {
+        position: initial;
+        right: auto;
     }
-  }
+}
